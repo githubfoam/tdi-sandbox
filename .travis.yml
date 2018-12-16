@@ -18,23 +18,23 @@ before_install:
   - curl -L https://www.getchef.com/chef/install.sh | sudo bash -s -- -P chefdk -v 3.5.13
   - eval "$(/opt/chefdk/bin/chef shell-init bash)"
   - rvm version
-# jobs:
-#   include:
-#     - stage: kitchen create
-#     # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
-#       before_script:
-#         - sudo iptables -L DOCKER || sudo iptables -N DOCKER
-#       script:
-#         - rake kitchen:create:default-ubuntu-1604
-#     - stage: kitchen converge
-#       script:
-#         - rake kitchen:converge:default-ubuntu-1604
-#     - stage: kitchen verify
-#       script:
-#         - rake kitchen:verify:default-ubuntu-1604
-#     - stage: kitchen destroy
-#       script:
-#         - rake kitchen:destroy:default-ubuntu-1604
+jobs:
+  include:
+    - stage: kitchen create
+    # https://github.com/zuazo/kitchen-in-travis-native/issues/1#issuecomment-142455888
+      before_script:
+        - sudo iptables -L DOCKER || sudo iptables -N DOCKER
+      script:
+        - rake kitchen:create:default-ubuntu-1604
+    - stage: kitchen converge
+      script:
+        - rake kitchen:converge:default-ubuntu-1604
+    - stage: kitchen verify
+      script:
+        - rake kitchen:verify:default-ubuntu-1604
+    - stage: kitchen destroy
+      script:
+        - rake kitchen:destroy:default-ubuntu-1604
 #     - stage: Continuous Delivery Step, black box DAST etc tests
 #       script:
 #         # DODCKER_TOKEN must be entered travis website -> repository -> settings -> environment variables
