@@ -16,17 +16,24 @@ Travis (.com) dev branch:
 
 ----------------
 
-Compliance as Code
+Specs
 ----------------
 
 
-File:
+
 
       DevSecOps Pipeline
-      Container Security
-      Security Hardening
+      Container security hardening
+      Linux security hardening
+      Not an Ansible role
+      Compliance as code
+      Infrastructure as code
       Test-Driven Infrastructure      
       dev-sec/linux-baseline
+      Test-kitchen support: Chef, Puppet, Ansible, Shell
+      Test-kitchen verifiers: Inspec, BAT, Serverspec
+      Unit test support: Serverspec
+      Integration test support: Inspec
 
 
 
