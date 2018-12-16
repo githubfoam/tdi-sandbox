@@ -22,7 +22,6 @@ Compliance as Code
 
 File:
 
-      Compliance as Code
       DevSecOps Pipeline
       Test-Driven Infrastructure      
       dev-sec/linux-baseline
