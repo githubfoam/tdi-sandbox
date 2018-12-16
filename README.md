@@ -23,6 +23,8 @@ Compliance as Code
 File:
 
       DevSecOps Pipeline
+      Container Security
+      Security Hardening
       Test-Driven Infrastructure      
       dev-sec/linux-baseline
 
