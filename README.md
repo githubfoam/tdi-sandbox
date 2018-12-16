@@ -22,7 +22,9 @@ Compliance as Code
 
 File:
 
-      Test-Driven Infrastructure
+      Compliance as Code
+      DevSecOps Pipeline
+      Test-Driven Infrastructure      
       dev-sec/linux-baseline
 
 
