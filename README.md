@@ -1,9 +1,6 @@
 # tdi-sandbox
 ----------------
 
-compliance as code,infrastructure as code, test driven infrastructure
-=========
-
 
 Travis (.com) master branch:
 [![Build Status](https://travis-ci.com/githubfoam/ansible-role-openvswitch.svg?branch=master)](https://travis-ci.com/githubfoam/ansible-role-openvswitch)  
