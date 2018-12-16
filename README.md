@@ -3,16 +3,16 @@
 
 
 Travis (.com) master branch:
-[![Build Status](https://travis-ci.com/githubfoam/ansible-role-openvswitch.svg?branch=master)](https://travis-ci.com/githubfoam/ansible-role-openvswitch)  
+[![Build Status](https://travis-ci.com/githubfoam/tdi-sandbox.svg?branch=master)](https://travis-ci.com/githubfoam/tdi-sandbox)  
 Travis (.com) test branch:
-[![Build Status](https://travis-ci.com/githubfoam/ansible-role-openvswitch.svg?branch=test)](https://travis-ci.com/githubfoam/ansible-role-openvswitch)  
+[![Build Status](https://travis-ci.com/githubfoam/tdi-sandbox.svg?branch=test)](https://travis-ci.com/githubfoam/tdi-sandbox)  
 Travis (.com) dev branch:
-[![Build Status](https://travis-ci.com/githubfoam/ansible-role-openvswitch.svg?branch=dev)](https://travis-ci.com/githubfoam/ansible-role-openvswitch)  
+[![Build Status](https://travis-ci.com/githubfoam/tdi-sandbox.svg?branch=dev)](https://travis-ci.com/githubfoam/tdi-sandbox)  
 
 
 
-[![GitHub search hit counter](https://img.shields.io/github/search/githubfoam/ansible-role-openvswitch/goto.svg)](https://github.com/githubfoam/ansible-role-openvswitch)  
-[![GitHub](https://img.shields.io/github/license/githubfoam/ansible-role-openvswitch.svg?style=plastic)](https://github.com/githubfoam/ansible-role-openvswitch)
+[![GitHub search hit counter](https://img.shields.io/github/search/githubfoam/tdi-sandbox/goto.svg)](https://github.com/githubfoam/tdi-sandbox)  
+[![GitHub](https://img.shields.io/github/license/githubfoam/tdi-sandbox.svg?style=plastic)](https://github.com/githubfoam/tdi-sandbox)
 
 ----------------
 
