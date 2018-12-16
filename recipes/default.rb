@@ -12,3 +12,12 @@ end
 package 'auditd' do
   action :install
 end
+
+template '/etc/audit/auditd.conf' do
+  source 'auditd.conf.erb'
+  notifies :restart, 'service[auditd]'
+end
+
+service 'auditd' do
+  action :nothing
+end
