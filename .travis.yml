@@ -5,10 +5,10 @@ rvm:
   - 2.5
 sudo: required
 env:
-  # global:
-  #  - distribution=ubuntu
-  #    version=18.04
-  #  - COMMIT=${TRAVIS_COMMIT::8}
+  global:
+   - distribution=ubuntu
+     version=18.04
+   - COMMIT=${TRAVIS_COMMIT::8}
   matrix:
     - INSTANCE=default-ubuntu-1604
   # - INSTANCE=default-ubuntu-1804
