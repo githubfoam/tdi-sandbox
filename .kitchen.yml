@@ -1,31 +1,67 @@
 ---
 driver:
-  name: dokken
+  # https://github.com/test-kitchen/kitchen-docker
+  name: docker
+  #name: dokken
   chef_version: latest
-
-transport:
-  name: dokken
-
-provisioner:
-  name: dokken
-  always_update_cookbooks: true
-
-verifier:
-  name: inspec
+  # enable cachier so we don’t need to re-download repo update multiple times.
+  cachier: true
+  # This determines if Docker commands are run with sudo
+  # The default value depends on the type of socket being used. For local sockets, the default value is true. For remote sockets, the default value is false
+  # This should be set to false if you're using boot2docker, as every command passed into the VM runs as root by default.
+  # use_sudo=false
+#   name: dokken
+#   chef_version: latest
+#
+# transport:
+#   name: dokken
+#
+# provisioner:
+#   name: dokken
+#   always_update_cookbooks: true
+#
+# verifier:
+#   name: inspec
 
 platforms:
   - name: ubuntu-16.04
 
+provisioner:
+  name: ansible_playbook
+  ansible_verbose: true
+  ansible_verbosity: 1
+  ansible_version: latest
+  idempotency_test: true
+  require_chef_for_busser: false
+  always_update_cookbooks: true
+  #playbook: test.yml
+  #playbook: roles/common/tests/test.yml
+  playbook: roles/githubfoam.openvswitch/tests/test.yml
+  hosts: all
+  additional_copy_path:
+    - "."
+
+verifier:
+  # use default verifier by test kitchen, inspec
+  name: inspec
+
 suites:
   - name: default
     run_list:
-      - recipe[auditd::default]
+      - recipe[git_cookbook1::default]
     verifier:
       inspec_tests:
-        - name: dev-sec/linux-baseline
-    #   limit testing to just the "package-08" control
-      controls:
-       - package-08
-      format: json
-      output: ./linux-baseline-results.json
+        - test/integration/default
     attributes:
+  # - name: default
+  #   run_list:
+  #     - recipe[auditd::default]
+  #   verifier:
+  #     inspec_tests:
+  #       - name: dev-sec/linux-baseline
+  #   #   limit testing to just the "package-08" control
+  #     controls:
+  #      - package-08
+  #     format: json
+  #     output: ./linux-baseline-results.json
+  #   attributes:
