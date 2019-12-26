@@ -21,9 +21,8 @@ provisioner:
   idempotency_test: true
   require_chef_for_busser: false
   always_update_cookbooks: true
-  #playbook: test.yml
-  #playbook: roles/common/tests/test.yml
-  playbook: roles/githubfoam.openvswitch/tests/test.yml
+  playbook: roles/observium/tests/test.yml  
+  # playbook: roles/githubfoam.openvswitch/tests/test.yml
   hosts: all
   additional_copy_path:
     - "."
