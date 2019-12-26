@@ -22,7 +22,6 @@ provisioner:
   require_chef_for_busser: false
   always_update_cookbooks: true
   playbook: roles/observium/tests/test.yml  
-  # playbook: roles/githubfoam.openvswitch/tests/test.yml
   hosts: all
   additional_copy_path:
     - "."
